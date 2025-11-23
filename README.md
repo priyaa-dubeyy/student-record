@@ -1,27 +1,24 @@
-Student Record API
-
-A simple Node.js + Express + MongoDB (Mongoose) based REST API to manage student records.
+A simple **Node.js + Express + MongoDB (Mongoose)** based REST API to manage student records.
 This project handles basic CRUD operations including creating, reading, updating and deleting student data.
 
-🚀 Features
+---
 
-Add new students
+## 🚀 Features
 
-Get all students
+* Add new students
+* Get all students
+* Update existing student
+* Delete a student
+* MongoDB database connection
+* Proper folder structure (config, models, routes)
+* Clean Express routing
+* JSON-based API responses
 
-Update existing student
+---
 
-Delete a student
+## 📂 Project Structure
 
-MongoDB database connection
-
-Proper folder structure (config, models, routes)
-
-Clean Express routing
-
-JSON-based API responses
-
-📂 Project Structure
+```
 student-record-api/
 │
 ├── app.js
@@ -35,12 +32,16 @@ student-record-api/
 │
 └── routes/
     └── studentRoutes.js
+```
 
-💾 Database
+---
 
-The API uses MongoDB as the database.
-A studentdb database (automatically created) stores documents like:
+## 💾 Database
 
+The API uses **MongoDB** as the database.
+A `studentdb` database (automatically created) stores documents like:
+
+```json
 {
   "_id": "ObjectId",
   "name": "Harsh",
@@ -48,36 +49,57 @@ A studentdb database (automatically created) stores documents like:
   "age": 21,
   "city": "Ranchi"
 }
+```
 
-⚙️ Installation & Setup
-1️⃣ Clone the repository
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
+
+```bash
 git clone https://github.com/harzhr/student-record-api.git
+```
 
-2️⃣ Move into the project folder
+### 2️⃣ Move into the project folder
+
+```bash
 cd student-record-api
+```
 
-3️⃣ Install dependencies
+### 3️⃣ Install dependencies
+
+```bash
 npm install
+```
 
-4️⃣ Start MongoDB server
+### 4️⃣ Start MongoDB server
 
 Make sure MongoDB is running (Compass or local service).
 
-5️⃣ Start the server
-npm run dev
+### 5️⃣ Start the server
 
+```bash
+npm run dev
+```
 
 Server will run at:
 
+```
 http://localhost:8000
+```
 
-🛠️ API Endpoints
-📍 GET /students
+---
+
+## 🛠️ API Endpoints
+
+### 📍 **GET /students**
 
 Get all students
 
-Response:
+**Response:**
 
+```json
 [
   {
     "_id": "67abc123...",
@@ -87,23 +109,28 @@ Response:
     "city": "Ranchi"
   }
 ]
+```
 
-📍 POST /students
+---
+
+### 📍 **POST /students**
 
 Add a new student
 
-Body (JSON):
+**Body (JSON):**
 
+```json
 {
   "name": "Harsh",
   "course": "ECE",
   "age": 21,
   "city": "Ranchi"
 }
+```
 
+**Response:**
 
-Response:
-
+```json
 {
   "_id": "67abc123...",
   "name": "Harsh",
@@ -111,59 +138,68 @@ Response:
   "age": 21,
   "city": "Ranchi"
 }
+```
 
-📍 PUT /students/:id
+---
+
+### 📍 **PUT /students/:id**
 
 Update a student
 
-Body (JSON):
+**Body (JSON):**
 
+```json
 {
   "name": "Updated Name",
   "course": "CSE",
   "age": 22,
   "city": "Delhi"
 }
+```
 
-📍 DELETE /students/:id
+---
+
+### 📍 **DELETE /students/:id**
 
 Delete a student
 
-Response:
+**Response:**
 
+```json
 {
   "message": "Student deleted successfully"
 }
+```
 
-📘 Technologies Used
+---
 
-Node.js
+## 📘 Technologies Used
 
-Express.js
+* **Node.js**
+* **Express.js**
+* **MongoDB**
+* **Mongoose**
+* **Nodemon**
 
-MongoDB
+---
 
-Mongoose
-
-Nodemon
-
-🎯 Purpose of the Project
+## 🎯 Purpose of the Project
 
 This project demonstrates:
 
-Backend API development
+* Backend API development
+* REST concepts
+* Working with Express routing
+* MongoDB and Mongoose CRUD operations
+* Proper folder structure in Node.js projects
 
-REST concepts
 
-Working with Express routing
 
-MongoDB and Mongoose CRUD operations
+---
 
-Proper folder structure in Node.js projects
+## 🙌 Author
 
-Perfect for college minor projects, backend practice, or API development learning.
+**Harsh (@harzhr)**
+GitHub: [https://github.com/harzhr](https://github.com/harzhr)
 
-🙌 Author
-
-Harsh (@harzhr)
-GitHub: https://github.com/harzhr
+---
